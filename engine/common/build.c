@@ -148,6 +148,15 @@ const char *Q_buildarch( void )
 		"el"
 	#endif
 	;
+#elif XASH_PPC
+	archname = "powerpc"
+	#if XASH_64BIT
+		"64"
+	#endif
+	#if XASH_LITTLE_ENDIAN
+		"le"
+	#endif
+	;
 #elif XASH_RISCV
 	archname = "riscv"
 	#if XASH_64BIT
